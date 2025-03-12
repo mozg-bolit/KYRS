@@ -22,5 +22,5 @@ class Converters {
     @TypeConverter
     fun toDeductionType(value: String): DeductionType {
         return DeductionType.valueOf(value)
-    }//sdasd
+    }//sdasлd
 }
