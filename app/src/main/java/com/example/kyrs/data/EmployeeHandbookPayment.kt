@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 
-@Entity(tableName = "Лист",
+@Entity(tableName = "employee_handbook_payment",
        primaryKeys = ["employee_id","handbook_payment_id"],
         foreignKeys = [
             ForeignKey(
@@ -20,7 +20,6 @@ import androidx.room.Index
             onDelete = ForeignKey.CASCADE
         )
         ],
-    indices = [Index(value = ["employee_id", "handbook_payment_id"], unique = true)]
     )
 data class EmployeeHandbookPayment (
     var employee_id:Int,

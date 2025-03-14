@@ -2,9 +2,19 @@ package com.example.kyrs.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity (tableName = "Департамент")
+@Entity (tableName = "department",
+        foreignKeys = [
+            ForeignKey(
+                entity = Employee::class,
+                parentColumns = ["id"],
+                childColumns = ["cheif_id"],
+                onDelete = ForeignKey.CASCADE
+            )
+        ]
+    )
 data class Department (
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
@@ -13,5 +23,5 @@ data class Department (
     var desсription :String,
     @ColumnInfo(name = "name")
     var name:String,
-    //cheif_id_id_Int потом глянуть!!!
+    var cheif_id:Int
 )

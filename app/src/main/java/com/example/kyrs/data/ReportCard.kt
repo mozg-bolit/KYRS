@@ -11,7 +11,7 @@ data class ReportCard(
     var id: Int? = null,
 
     @ColumnInfo(name = "date")
-    var date: Date,
+    var date: Long,
 
     @ColumnInfo(name = "hours_worked")
     var hours_worked: Int

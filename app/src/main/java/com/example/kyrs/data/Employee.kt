@@ -7,19 +7,25 @@ import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity(
-    tableName = "Сотрудник",
+    tableName = "employee",
     foreignKeys = [
         ForeignKey(
             entity = Department::class,
             parentColumns = ["id"], // Столбец в таблице Department
-            childColumns = ["department_id_id"], // Столбец в текущей таблице (Employee)
+            childColumns = ["department_id"], // Столбец в текущей таблице (Employee)
             onDelete = ForeignKey.CASCADE // Действие при удалении
         ),
         ForeignKey(
             entity = Job::class,
             parentColumns = ["id"], // Столбец в таблице Job
-            childColumns = ["job_id_id"], // Столбец в текущей таблице (Employee)
+            childColumns = ["job_id"], // Столбец в текущей таблице (Employee)
             onDelete = ForeignKey.CASCADE // Действие при удалении
+        ),
+        ForeignKey(
+            entity = ListDeduction::class,
+            parentColumns = ["id"],
+            childColumns = ["list_deduction_id"],
+            onDelete = ForeignKey.CASCADE
         )
     ]
 )
@@ -28,7 +34,7 @@ data class Employee(
     var id: Int? = null,
 
     @ColumnInfo(name = "date_admission")
-    var date_admission: Date,
+    var date_admission: Long,
 
     @ColumnInfo(name = "email")
     var email: String,
@@ -42,9 +48,15 @@ data class Employee(
     @ColumnInfo(name = "surname")
     var surname: String,
 
-    @ColumnInfo(name = "department_id_id") // Добавлено поле для внешнего ключа
-    var department_id_id: Int,
+    @ColumnInfo(name = "department_id") // Добавлено поле для внешнего ключа
+    var department_id: Int,
 
-    @ColumnInfo(name = "job_id_id") // Добавлено поле для внешнего ключа
-    var job_id_id: Int
+    @ColumnInfo(name = "job_id") // Добавлено поле для внешнего ключа
+    var job_id: Int,
+
+    @ColumnInfo(name = "list_deduction_id")
+    var list_deduction_id:Int,
+
+//    @ColumnInfo(name = "report_card")
+//    var reportCard: ReportCard
 )
