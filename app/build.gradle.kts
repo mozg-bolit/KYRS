@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    implementation("com.android.volley:volley:1.2.1")
+
     implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7")
 
 
