@@ -1,9 +1,8 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.Date
 
 @Entity(tableName = "handbook_payment")
 data class HandbookPayment (

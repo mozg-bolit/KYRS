@@ -1,4 +1,4 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 import androidx.room.Entity
 import androidx.room.ForeignKey

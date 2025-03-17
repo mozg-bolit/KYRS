@@ -5,8 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.kyrs.data.Department
-import com.example.kyrs.data.User
+import com.example.kyrs.data.Models.Department
 
 @Dao
 interface DepartmentDao {

@@ -5,8 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.kyrs.data.Deduction
-import com.example.kyrs.data.Department
+import com.example.kyrs.data.Models.Deduction
 
 @Dao
 interface DeductionDao {

@@ -1,10 +1,9 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import java.util.Date
 
 @Entity(
     tableName = "employee",
@@ -57,6 +56,9 @@ data class Employee(
     @ColumnInfo(name = "list_deduction_id")
     var list_deduction_id:Int,
 
-//    @ColumnInfo(name = "report_card")
-//    var reportCard: ReportCard
+    @ColumnInfo(name = "report_card")
+    var reportCard: List<ReportCard>,
+
+    @ColumnInfo(name = "handbook_payment")
+    var handbookPayment: List<HandbookPayment>
 )

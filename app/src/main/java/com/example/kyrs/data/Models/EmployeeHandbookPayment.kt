@@ -1,8 +1,7 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
-import androidx.room.Index
 
 @Entity(tableName = "employee_handbook_payment",
        primaryKeys = ["employee_id","handbook_payment_id"],

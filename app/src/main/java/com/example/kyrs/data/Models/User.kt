@@ -1,4 +1,4 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -13,5 +13,8 @@ data class User(
     @ColumnInfo(name = "username")
     var username:String,
     @ColumnInfo(name = "password")
-    var password:String
+    var password:String,
+
+    @ColumnInfo(name = "token")
+    var token:String
 )

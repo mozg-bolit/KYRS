@@ -5,8 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.kyrs.data.Employee
-import com.example.kyrs.data.User
+import com.example.kyrs.data.Models.Employee
 
 @Dao
 interface EmployeeDao {

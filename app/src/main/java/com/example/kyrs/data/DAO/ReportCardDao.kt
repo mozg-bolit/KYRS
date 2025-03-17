@@ -5,8 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.kyrs.data.ListDeduction
-import com.example.kyrs.data.ReportCard
+import com.example.kyrs.data.Models.ReportCard
 
 @Dao
 interface ReportCardDao {

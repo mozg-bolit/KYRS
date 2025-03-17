@@ -1,4 +1,4 @@
-package com.example.kyrs.data
+package com.example.kyrs.data.Models
 
 enum class DeductionType {
     fine, text

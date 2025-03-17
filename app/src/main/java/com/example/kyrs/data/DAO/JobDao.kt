@@ -5,8 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.kyrs.data.HandbookPayment
-import com.example.kyrs.data.Job
+import com.example.kyrs.data.Models.Job
 
 @Dao
 interface JobDao {
@@ -17,7 +16,7 @@ interface JobDao {
     suspend fun updateJob(job: Job)
 
     @Delete
-    suspend fun deleteJob(job:Job)
+    suspend fun deleteJob(job: Job)
 
     @Query("SELECT * FROM job")
     suspend fun getAllJobs(): List<Job>

@@ -15,6 +15,18 @@ import com.example.kyrs.data.DAO.JobDao
 import com.example.kyrs.data.DAO.ListDeductionDao
 import com.example.kyrs.data.DAO.ReportCardDao
 import com.example.kyrs.data.DAO.UserDao
+import com.example.kyrs.data.Models.Converters
+import com.example.kyrs.data.Models.Deduction
+import com.example.kyrs.data.Models.Department
+import com.example.kyrs.data.Models.Employee
+import com.example.kyrs.data.Models.EmployeeHandbookPayment
+import com.example.kyrs.data.Models.EmployeeListDeduction
+import com.example.kyrs.data.Models.EmployeeReportCard
+import com.example.kyrs.data.Models.HandbookPayment
+import com.example.kyrs.data.Models.Job
+import com.example.kyrs.data.Models.ListDeduction
+import com.example.kyrs.data.Models.ReportCard
+import com.example.kyrs.data.Models.User
 
 @Database(
     entities = [
@@ -30,7 +42,7 @@ import com.example.kyrs.data.DAO.UserDao
         EmployeeListDeduction::class,
         ListDeduction::class
     ],
-    version = 2
+    version = 3
 )
 @TypeConverters(Converters::class)
 abstract class MainDB : RoomDatabase() {
