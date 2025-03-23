@@ -15,6 +15,4 @@ data class User(
     @ColumnInfo(name = "password")
     var password:String,
 
-    @ColumnInfo(name = "token")
-    var token:String
 )

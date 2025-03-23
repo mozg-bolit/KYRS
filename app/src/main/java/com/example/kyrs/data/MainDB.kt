@@ -45,7 +45,7 @@ import com.example.kyrs.data.Models.User
     version = 3
 )
 @TypeConverters(Converters::class)
-abstract class MainDB : RoomDatabase() {
+abstract class MainDB : RoomDatabase() {//
     abstract fun getEmployeeDao(): EmployeeDao
     abstract fun getUserDao(): UserDao
     abstract fun getDepartmentDao(): DepartmentDao
@@ -55,7 +55,7 @@ abstract class MainDB : RoomDatabase() {
     abstract fun getListDeductionDao(): ListDeductionDao
     abstract fun getReportCardDao(): ReportCardDao
 
-    companion object {
+    companion object {//
         @Volatile
         private var INSTANCE: MainDB? = null
 
@@ -65,17 +65,14 @@ abstract class MainDB : RoomDatabase() {
         }
 
         fun getDb(context: Context): MainDB {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    MainDB::class.java,
-                    "kurs.db"
+            return Room.databaseBuilder( //
+                    context.applicationContext,//
+                    MainDB::class.java,//
+                    "kurs.db"//
                 ).addMigrations(Migration_1_2) // Используем миграцию
                 //для удаления    .fallbackToDestructiveMigration()
-                    .build()
-                INSTANCE = instance
-                instance
+                    .build()//
             }
         }
     }
-}
+///////// -> // обяз элем
