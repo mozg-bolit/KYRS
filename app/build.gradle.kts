@@ -34,9 +34,17 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {
+
+    implementation("android.arch.navigation:navigation-fragment-ktx:2.5.2")
+    implementation("android.arch.navigation:navigation-ui-ktx:2.5.2")
 
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
@@ -51,6 +59,8 @@ dependencies {
 
     implementation ("androidx.room:room-ktx:2.6.1")
     implementation("androidx.room:room-runtime:2.6.1")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt ("androidx.room:room-compiler:2.6.1")
     implementation ("androidx.core:core-ktx:1.15.0")
 
