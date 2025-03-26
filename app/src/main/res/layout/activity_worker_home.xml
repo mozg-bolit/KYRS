@@ -8,7 +8,7 @@
     tools:context=".WorkerHome">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imagePersph"
         android:layout_width="407dp"
         android:layout_height="212dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,27 +71,17 @@
         app:layout_constraintStart_toStartOf="@+id/fio"
         app:layout_constraintTop_toBottomOf="@+id/job" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="407dp"
-        android:layout_height="212dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/person" />
-
     <TextView
-        android:linksClickable="true"
-
         android:id="@+id/fio"
+
         android:layout_width="388dp"
         android:layout_height="36dp"
-        android:layout_marginTop="48dp"
+        android:linksClickable="true"
         android:text="ФИО: "
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteY="260dp" />
 
     <TextView
         android:id="@+id/payment"

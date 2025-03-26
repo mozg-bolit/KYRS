@@ -43,8 +43,8 @@ android {
 
 dependencies {
 
-    implementation("android.arch.navigation:navigation-fragment-ktx:2.5.2")
-    implementation("android.arch.navigation:navigation-ui-ktx:2.5.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
 
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 

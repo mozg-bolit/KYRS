@@ -1,7 +1,6 @@
 package com.example.kyrs
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +9,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kyrs.data.Models.Message
@@ -19,8 +20,8 @@ class MessageActivity : AppCompatActivity() {
 
     private lateinit var conf: AppBarConfiguration
     private lateinit var navController: NavController
-
     private lateinit var binding: ActivityMainBinding
+
     private val list_messages = mutableListOf<Message>()
 
     @SuppressLint("MissingInflatedId")
@@ -29,11 +30,14 @@ class MessageActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.ab.toolbar)
         navController = findNavController(R.id.fragmentContainerView)
         conf = AppBarConfiguration(
-            setOf(R.id.item1, R.id.item2,),
-            binding.drawerLayout
+            setOf(R.id.item1, R.id.item2),
+            binding.drawer
         )
+        setupActionBarWithNavController(navController, conf)
+        binding.navView.setupWithNavController(navController)
 
 
         // Используем RecyclerView для setOnApplyWindowInsetsListener
@@ -70,5 +74,9 @@ class MessageActivity : AppCompatActivity() {
             Message(null, "Ольга", "Кузнецова", "Александровна", "Все хорошо!", 1672790400000L)
         )
         list_messages.addAll(messages)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(conf) || super.onSupportNavigateUp()
     }
 }
