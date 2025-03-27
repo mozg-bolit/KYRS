@@ -72,9 +72,6 @@ class MessageActivity : AppCompatActivity() {
 
 
 
-
-
-
 //        // Используем RecyclerView для setOnApplyWindowInsetsListener
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.messages)) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
