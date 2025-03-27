@@ -1,14 +1,14 @@
-package com.example.kyrs
+package com.example.kyrs.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kyrs.R
 
-class item2Fragment : Fragment() {
-
-
+class EmployeeFragment : Fragment() {
+    // TODO: Rename and change types of parameters
 
 
 
@@ -17,6 +17,6 @@ class item2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_item2, container, false)
+        return inflater.inflate(R.layout.fragment_employee, container, false)
     }
 }

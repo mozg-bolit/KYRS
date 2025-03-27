@@ -35,16 +35,20 @@ android {
         jvmTarget = "11"
     }
 
-    buildFeatures{
-        viewBinding = true
-    }
 
 }
 
 dependencies {
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
+
+    implementation("androidx.navigation:navigation-fragment:2.8.9")
+    implementation("androidx.navigation:navigation-ui:2.8.9")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.9")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.9")
+
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+
 
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 

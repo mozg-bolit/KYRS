@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">KYRS</string>
+
+    <string name="hello_blank_mess">mess</string>
+    <string name="hello_blank_rass">rass</string>
+    <string name="hello_blank_settings">settins</string>
+    <string name="hello_blank_employee">employee</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

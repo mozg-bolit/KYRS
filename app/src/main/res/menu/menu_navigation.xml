@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_employee"
+        android:title="Сотрудники"
+        android:enabled="true"
+        android:icon="@drawable/sotr"
+
+        />
+    <item
+        android:id="@+id/navigation_rass"
+        android:enabled="true"
+        android:title="Расчет"
+        android:icon="@drawable/ras"
+        />
+    <item
+        android:id="@+id/navigation_message"
+        android:title="Сообщения"
+        android:enabled="true"
+        android:icon="@drawable/mess"
+        />
+    <item
+        android:id="@+id/navigation_settings"
+        android:enabled="true"
+        android:title="Настройки"
+        android:icon="@drawable/settings"
+        />
+
+</menu>
