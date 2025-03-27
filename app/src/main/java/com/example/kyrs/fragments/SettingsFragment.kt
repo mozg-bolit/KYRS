@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import com.example.kyrs.R
 
 // TODO: Rename parameter arguments, choose names that match
-class RassFragment : Fragment() {
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+class SettingsFragment : Fragment() {
+    // TODO: Rename and change types of parameters
 
 
     override fun onCreateView(
@@ -16,6 +19,6 @@ class RassFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rass, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 }
