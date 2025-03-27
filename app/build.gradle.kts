@@ -40,6 +40,8 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.material:material:1.12.0")
+
 
     implementation("androidx.navigation:navigation-fragment:2.8.9")
     implementation("androidx.navigation:navigation-ui:2.8.9")
@@ -65,6 +67,8 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.fragment.ktx)
     kapt ("androidx.room:room-compiler:2.6.1")
     implementation ("androidx.core:core-ktx:1.15.0")
 
