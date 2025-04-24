@@ -51,6 +51,7 @@ class MessageActivity : AppCompatActivity() {
 
 
 
+
         // Настраиваем RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.messages)
         recyclerView.layoutManager = LinearLayoutManager(this)
