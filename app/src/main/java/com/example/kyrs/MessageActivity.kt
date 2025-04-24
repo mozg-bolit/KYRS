@@ -48,6 +48,7 @@ class MessageActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
         navView.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.navigation_employee -> {
@@ -72,14 +73,9 @@ class MessageActivity : AppCompatActivity() {
 
 
 
-<<<<<<< HEAD
 
-        // Настраиваем RecyclerView
-        val recyclerView: RecyclerView = findViewById(R.id.messages)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        val adapter = MessageAdapter(this, list_messages)
-        recyclerView.adapter = adapter
-=======
+
+
 //        // Используем RecyclerView для setOnApplyWindowInsetsListener
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.messages)) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -94,7 +90,6 @@ class MessageActivity : AppCompatActivity() {
 //        recyclerView.layoutManager = LinearLayoutManager(this)
 //        val adapter = MessageAdapter(this, list_messages)
 //        recyclerView.adapter = adapter
->>>>>>> e6e849ae9f93b5965070c019344f1d20f682edea
 
 
     }
