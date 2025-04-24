@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.kyrs.R
 
-class RassFragment : Fragment() {
+class SettingFragment : Fragment() {
 
     companion object {
-        fun newInstance() = RassFragment()
+        fun newInstance() = SettingFragment()
     }
 
-    private val viewModel: RassViewModel by viewModels()
+    private val viewModel: SettingViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,6 @@ class RassFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_rass, container, false)
+        return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 }
